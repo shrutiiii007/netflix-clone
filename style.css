@@ -103,6 +103,15 @@ select {
   align-items: center;
   gap: 16px;
 }
+ 
+.get-started-button{
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  border: none;
+  height: 56px;
+  cursor: pointer;
+}
 
 .netflix_section_1_crescent {
   width: 100%;
