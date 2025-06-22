@@ -1,0 +1,217 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: white;
+}
+
+@font-face {
+  font-family: "NetflixCustomBold";
+  src: url("fonts/NetflixSans-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NetflixCustomMedium";
+  src: url("fonts/NetflixSans-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NetflixCustomLight";
+  src: url("fonts/NetflixSans-Light.otf") format("opentype");
+}
+
+.netflix_section_1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8)),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/8200f588-2e93-4c95-8eab-ebba17821657/web/IN-en-20250616-TRIFECTA-perspective_9cbc87b2-d9bb-4fa8-9f8f-a4fe8fc72545_large.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.netflix_section_1_top_bar {
+  height: 88px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 148px;
+}
+
+.netflix_section_1_top_bar_logo {
+}
+
+.netflix_section_1_top_bar_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 34px;
+}
+
+.netflix_section_1_top_bar_buttons_language {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  position: relative;
+}
+
+.netflix_section_1_top_bar_buttons_language_symbol {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+}
+
+.netflix_section_1_top_bar_buttons_language_arrow {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+}
+
+select {
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  width: 124.4px;
+  padding: 0px 36px;
+  appearance: none;
+  height: 32px;
+}
+
+.netflix_section_1_top_bar_buttons_signin {
+}
+
+.signinbutton {
+  background-color: red;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  height: 32px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.netflix_section_1_get_started {
+  width: 100%;
+  height: calc(100% - 188px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.netflix_section_1_get_started_text_1 {
+  font-size: 56px;
+  width: 588px;
+  text-align: center;
+  margin-bottom: 16px;
+  font-family: "NetflixCustomBold", sans-serif;
+}
+
+.netflix_section_1_get_started_text_2 {
+  font-size: 20px;
+  margin-bottom: 34px;
+  font-family: "NetflixCustomMedium", sans-serif;
+}
+
+.netflix_section_1_get_started_text_3 {
+  font-size: 16px;
+  font-family: "NetflixCustomLight", sans-serif;
+}
+
+.netflix_section_1_get_started_email_input_and_button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 16px;
+  height: 56px;
+  /* width: 366.75px; */
+  padding: 8px;
+}
+
+netflix_section_1_get_started_email_input {
+  height: 56px;
+  width: 366.75px;
+  /* padding: 8px; */
+  border: solid rgb(247, 236, 236) 20px !important;
+}
+
+.email-input {
+  background-color: transparent;
+  border: transparent;
+  height: 100%;
+  width: 366.75px;
+}
+
+input::placeholder {
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+netflix_section_1_get_started_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 213.25px !important; */
+}
+
+.get-started-button {
+  color: white;
+  background-color: rgb(229, 9, 20);
+  border-radius: 3px;
+  border: none;
+  height: 56px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 213.25px;
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: space-around;
+  position: relative;
+  left: -35px;
+}
+
+.netflix_section_1_crescent {
+  width: 100%;
+  left: -15%;
+  border-radius: 100%;
+  border: 4px solid;
+  border-color: lightpink transparent transparent;
+  /* border-image: linear-gradient(45deg, #990a0a, #ee0979); */
+  height: 100px;
+  background: radial-gradient(
+      50% 500% at 50% -420%,
+      rgba(64, 97, 231, 0.4) 80%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    black;
+}
+
+.image-scrollbar-unit{
+  width: 100vw;
+  background-color: black;
+  height: 200px;
+  position: relative;
+  top: 0px;
+}
+
+.scroll-images {
+  height: 252px;
+  width: 180px;
+  background-image: url(https://occ-0-6245-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUhpdEpzHYfnPnHNbojySI_GMO9oaeZoaj-1hsW_orVNftH6TbH0sOBM4T-iixC82-cNn58AH3wyfEPPPIqeQ12zNja6KT3C9ojoXJLeQRs61XhQQYMxg0uicDwrwJITVsfC.webp?r=27c&quot);
+  display: flex;
+  flex-direction: row;
+}
