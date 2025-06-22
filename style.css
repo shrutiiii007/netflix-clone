@@ -59,7 +59,7 @@ select {
   border-radius: 5px;
   display: flex;
   align-items: center;
-  width: 124px;
+  width: 124.4px;
   padding: 0px 36px;
   appearance: none;
   height: 32px;
@@ -114,6 +114,15 @@ select {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-top: 16px;
+  height: 56px;
+}
+
+.email-input{
+  height: 56px;
+  background-color: transparent;
+  border: solid rgb(222, 212, 212) 1px;
+  width: 366.75px;
 }
  
 .get-started-button{
@@ -123,6 +132,9 @@ select {
   border: none;
   height: 56px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .netflix_section_1_crescent {
