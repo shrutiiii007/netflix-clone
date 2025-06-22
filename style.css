@@ -2,12 +2,26 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 
+@font-face {
+  font-family: "NetflixCustomBold";
+  src: url("fonts/NetflixSans-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NetflixCustomMedium";
+  src: url("fonts/NetflixSans-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NetflixCustomLight";
+  src: url("fonts/NetflixSans-Light.otf") format("opentype");
+}
+
 .netflix_section_1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8)),
     url("https://assets.nflxext.com/ffe/siteui/vlv3/8200f588-2e93-4c95-8eab-ebba17821657/web/IN-en-20250616-TRIFECTA-perspective_9cbc87b2-d9bb-4fa8-9f8f-a4fe8fc72545_large.jpg");
   background-size: cover;
   width: 100%;
@@ -81,7 +95,7 @@ select {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-}
+-webkit-font-smoothing: antialiased;}
 
 .netflix_section_1_get_started {
   width: 100%;
@@ -90,42 +104,61 @@ select {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .netflix_section_1_get_started_text_1 {
   font-size: 56px;
-  font-weight: 700;
   width: 588px;
   text-align: center;
   margin-bottom: 16px;
+  font-family: "NetflixCustomBold", sans-serif;
 }
 
 .netflix_section_1_get_started_text_2 {
   font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
+  font-family: "NetflixCustomMedium", sans-serif;
 }
 
 .netflix_section_1_get_started_text_3 {
   font-size: 16px;
+  font-family: "NetflixCustomLight", sans-serif;
 }
 
 .netflix_section_1_get_started_email_input_and_button {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   gap: 16px;
   margin-top: 16px;
   height: 56px;
+  /* width: 366.75px; */
+  padding: 8px;
 }
 
-.email-input{
+netflix_section_1_get_started_email_input {
   height: 56px;
-  background-color: transparent;
-  border: solid rgb(222, 212, 212) 1px;
   width: 366.75px;
+  padding: 8px;
+  border: solid white 20px;
 }
- 
-.get-started-button{
+
+.email-input {
+  background-color: transparent;
+  border: transparent;
+  height: 100%;
+  width: 100%;
+}
+
+input::placeholder {
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.get-started-button {
   color: white;
   background-color: red;
   border-radius: 5px;
@@ -135,6 +168,10 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 213.25px;
+  font-size: 25px;
+  font-weight: bold;
+  justify-content: space-around;
 }
 
 .netflix_section_1_crescent {
