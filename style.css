@@ -184,7 +184,8 @@ netflix_section_1_get_started_button{
   width: 100%;
   left: -15%;
   border-radius: 100%;
-  border: 4px solid  red;
+  border: 4px solid ;
+  border-color: red transparent transparent;
   height: 100px;
   background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
 }
