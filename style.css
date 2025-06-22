@@ -200,18 +200,45 @@ netflix_section_1_get_started_button {
     black;
 }
 
-.image-scrollbar-unit{
+/* .image-scrollbar-unit {
   width: 100vw;
   background-color: black;
   height: 200px;
   position: relative;
   top: 0px;
+  display: flex;
+  align-items: center;
+} */
+
+.netflix_section_2{
+  background-color: black;
+  height: 400px;
 }
+
+.image-scrollbar-container-unit {
+  width: calc(100vw - 40%);
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  scroll-padding: 10px;
+  margin: auto;
+}
+
+.image-scrollbar-container-unit::-webkit-scrollbar {
+  display: none;
+}
+
 
 .scroll-images {
   height: 252px;
   width: 180px;
   background-image: url(https://occ-0-6245-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUhpdEpzHYfnPnHNbojySI_GMO9oaeZoaj-1hsW_orVNftH6TbH0sOBM4T-iixC82-cNn58AH3wyfEPPPIqeQ12zNja6KT3C9ojoXJLeQRs61XhQQYMxg0uicDwrwJITVsfC.webp?r=27c&quot);
-  display: flex;
-  flex-direction: row;
+  background-size: cover !important;
+  border-radius: 10px;
+  flex: 0 0 50%;
+  /* scroll-snap-align: start;
+  scroll-snap-stop: always; */
 }
