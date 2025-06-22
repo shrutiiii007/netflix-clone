@@ -129,8 +129,8 @@ select {
 .netflix_section_1_get_started_email_input_and_button {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 16px;
+  justify-content: space-between;
+  gap: 90px;
   margin-top: 16px;
   height: 56px;
   /* width: 366.75px; */
@@ -140,7 +140,7 @@ select {
 netflix_section_1_get_started_email_input {
   height: 56px;
   width: 366.75px;
-  padding: 8px;
+  /* padding: 8px; */
   border: solid white 20px;
 }
 
@@ -158,26 +158,33 @@ input::placeholder {
   align-items: center;
 }
 
+netflix_section_1_get_started_button{
+  /* width: 213.25px !important; */
+}
+
 .get-started-button {
   color: white;
-  background-color: red;
-  border-radius: 5px;
+  background-color: rgb(229, 9, 20);
+  border-radius: 3px;
   border: none;
   height: 56px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 213.25px;
-  font-size: 25px;
+  width: 213.25px ;
+  font-size: 24px;
   font-weight: bold;
   justify-content: space-around;
+  position: inherit;
 }
+
 
 .netflix_section_1_crescent {
   width: 100%;
+  left: -15%;
   border-radius: 100%;
-  border: 4px solid red;
+  border: 4px solid  red;
   height: 100px;
-  background-color: white;
+  background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
 }
