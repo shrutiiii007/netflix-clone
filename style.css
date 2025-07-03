@@ -27,11 +27,12 @@
       rgba(0, 0, 0, 0) 50%,
       rgba(0, 0, 0, 0.7) 100%
     ),
-    url("https://assets.nflxext.com/ffe/siteui/vlv3/75b0ed49-75ab-4a63-bd45-37bc2c95cb73/web/IN-en-20250623-TRIFECTA-perspective_ae5833b7-6ce5-4e88-853e-014f38c506f1_large.jpg");
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/05e91faa-6f6d-4325-934e-5418dcc2567b/web/IN-en-20250630-TRIFECTA-perspective_159086b1-425f-435b-bcd5-1ed8039cdef9_large.jpg");
   background-position: center -28px;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 105vh;
+  overflow: hidden;
 }
 
 .netflix_section_1_top_bar {
@@ -120,17 +121,20 @@ select {
   text-align: center;
   margin-bottom: 16px;
   font-family: "NetflixCustomBold", sans-serif;
+  cursor: text;
 }
 
 .netflix_section_1_get_started_text_2 {
   font-size: 20px;
   margin-bottom: 34px;
+  cursor: text;
   font-family: "NetflixCustomMedium", sans-serif;
 }
 
 .netflix_section_1_get_started_text_3 {
   font-size: 16px;
   font-family: "NetflixCustomLight", sans-serif;
+  cursor: text;
 }
 
 .netflix_section_1_get_started_email_input_and_button {
@@ -192,11 +196,12 @@ input::placeholder {
 }
 
 .netflix_section_1_crescent {
-  width: 100%;
+  width: 130%;
   left: -15%;
-  border-radius: 100%;
   border: 4px solid;
   border-color: rgb(210, 48, 72) transparent transparent;
+  border-top-right-radius: 50% 100%;
+  border-top-left-radius: 50% 100%;
   /* border-image: linear-gradient(45deg, #990a0a, #ee0979); */
   height: 100px;
   background: radial-gradient(
@@ -205,41 +210,50 @@ input::placeholder {
       rgba(0, 0, 0, 0.1) 100%
     ),
     black;
-  margin-top: 32px;
-}
-
-/* .image-scrollbar-unit {
-  width: 100vw;
-  background-color: black;
-  height: 200px;
   position: relative;
-  top: 0px;
-  display: flex;
-  align-items: center;
-} */
+  top: -10px;
+  margin: auto;
+}
 
 .netflix_section_2 {
   background-color: black;
   height: 800px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
+  position: relative;
+  z-index: 1;
+}
+
+.trending-now-text {
+  font-family: "NetflixCustomLight", sans-serif;
+  position: relative;
+  left: 160px;
+  top: 20px;
+  font-weight: 900;
+  cursor: text;
 }
 
 .image-scrollbar-container-unit {
-  width: calc(100vw - 40%);
+  width: calc(100vw - 25%);
   height: fit-content;
   display: flex;
   flex-direction: row;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  gap: 16px;
+  gap: 40px;
   scroll-padding: 10px;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .image-scrollbar-container-unit::-webkit-scrollbar {
   display: none;
+}
+
+.scrollbar-image:hover{
+transform: scale(1.01);
 }
 
 .scroll-images {
@@ -250,10 +264,6 @@ input::placeholder {
   flex: 0 0 50%;
   /* scroll-snap-align: start;
   scroll-snap-stop: always; */
-}
-
-.first-scrollbar-image {
-  padding: 0.5rem 1.375rem 22px;
 }
 
 .scroll-images-1 {
@@ -288,8 +298,19 @@ input::placeholder {
 }
 
 .number {
-  font-size: 100px !important;
+  font-size: 100px;
+  color: rgb(0, 0, 0); /* Fill color */
+  -webkit-text-stroke: 1.5px rgb(255, 255, 255);
   font-weight: 700;
+  cursor: pointer;
+  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+  font-family: "NetflixCustomBold", sans-serif;
+  font-size: 100px;
+  position: relative;
+  left: -20px;
+  top: -125px;
+  z-index: 3;
+  /* font-weight: 700;
   line-height: 1;
   display: inline-block;
   height: 1em;
@@ -299,5 +320,5 @@ input::placeholder {
   content: attr(data-content);
   -webkit-text-stroke: 0;
   font: inherit;
-  cursor: pointer;
+  cursor: pointer; */
 }
