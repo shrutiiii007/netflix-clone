@@ -174,7 +174,6 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 213.25px !important; */
 }
 
 .get-started-button {
@@ -202,7 +201,6 @@ input::placeholder {
   border-color: rgb(210, 48, 72) transparent transparent;
   border-top-right-radius: 50% 100%;
   border-top-left-radius: 50% 100%;
-  /* border-image: linear-gradient(45deg, #990a0a, #ee0979); */
   height: 100px;
   background: radial-gradient(
       50% 500% at 50% -420%,
@@ -217,18 +215,14 @@ input::placeholder {
 
 .netflix_section_2 {
   background-color: black;
-  height: 800px;
-  /* margin-top: 30px; */
-  position: relative;
-  z-index: 1;
+  height: 380px;
 }
 
 .trending-now-text {
   font-family: "NetflixCustomLight", sans-serif;
-  position: relative;
-  left: 160px;
-  top: 20px;
   font-weight: 900;
+  width: calc(100vw - 25%);
+  margin: 0 auto;
   cursor: text;
 }
 
@@ -242,28 +236,23 @@ input::placeholder {
   scroll-snap-type: x mandatory;
   gap: 40px;
   scroll-padding: 10px;
-  margin: auto;
-  margin-top: 40px;
-  padding-left: 12px;
-  padding-right: 12px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.image-scrollbar-container-unit::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollbar-image:hover{
-transform: scale(1.01);
+.scrollbar-image:hover {
+  transform: scale(1.02);
 }
 
 .scroll-images {
   height: 252px;
-  width: 180px;
+  /* width: 180px; */
+  width: clamp(120px, 18vw, 180px);
   background-size: contain !important;
   border-radius: 10px;
   flex: 0 0 50%;
-  /* scroll-snap-align: start;
-  scroll-snap-stop: always; */
 }
 
 .scroll-images-1 {
@@ -299,8 +288,8 @@ transform: scale(1.01);
 
 .number {
   font-size: 100px;
-  color: rgb(0, 0, 0); /* Fill color */
-  -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
   font-weight: 700;
   cursor: pointer;
   text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
@@ -309,16 +298,51 @@ transform: scale(1.01);
   position: relative;
   left: -20px;
   top: -125px;
-  z-index: 3;
-  /* font-weight: 700;
-  line-height: 1;
-  display: inline-block;
-  height: 1em;
-  color: rgb(249, 249, 249);
-  -webkit-text-stroke: 0.25rem rgb(255, 255, 255);
-  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
-  content: attr(data-content);
-  -webkit-text-stroke: 0;
-  font: inherit;
-  cursor: pointer; */
+  z-index: 2;
+}
+
+.netflix_section_3 {
+  height: 500px;
+  background-color: black;
+}
+
+.join_text {
+  font-family: "NetflixCustomBold", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin-left: 180px;
+}
+
+.grid {
+  background-color: black;
+  display: grid;
+  height: 280px;
+  width: 90vw;
+  grid-template-columns: repeat(4,  clamp(180px, 29.5vw, 295px));
+  grid-template-rows:  280px;
+  gap: 16px;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-left: 105px;
+}
+
+.box {
+  background: linear-gradient(149deg, #192247 0%, #210e17 99.08%);
+  display: flex;
+  border-radius: 16px;
+  width: clamp(180px, 29.5vw, 295px);
+  height: 100%;
+}
+
+.box_text1{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "NetflixCustomBold", sans-serif;
+  margin: 15px;
+  width: 100%;
+  height: 25%;
 }
