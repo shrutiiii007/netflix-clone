@@ -21,11 +21,21 @@
 }
 
 .netflix_section_1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.65)),
-    radial-gradient(
-      circle at center,
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 0.7) 100%
+  background-image: linear-gradient(
+      12deg,
+      rgba(0, 0, 0, 0.85) 36%,
+      rgba(0, 0, 0, 0.8465) 40.58%,
+      rgba(0, 0, 0, 0.8361) 45.17%,
+      rgba(0, 0, 0, 0.8187) 49.75%,
+      rgba(0, 0, 0, 0.7944) 54.33%,
+      rgba(0, 0, 0, 0.7632) 58.92%,
+      rgba(0, 0, 0, 0.725) 63.5%,
+      rgba(0, 0, 0, 0.6868) 68.08%,
+      rgba(0, 0, 0, 0.6556) 72.67%,
+      rgba(0, 0, 0, 0.6313) 77.25%,
+      rgba(0, 0, 0, 0.6139) 81.83%,
+      rgba(0, 0, 0, 0.6035) 86.42%,
+      rgba(0, 0, 0, 0.6) 91%
     ),
     url("https://assets.nflxext.com/ffe/siteui/vlv3/05e91faa-6f6d-4325-934e-5418dcc2567b/web/IN-en-20250630-TRIFECTA-perspective_159086b1-425f-435b-bcd5-1ed8039cdef9_large.jpg");
   background-position: center -28px;
@@ -141,33 +151,44 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  gap: 50px; /* 50px is too large; adjust as needed */
   margin-top: 16px;
+  margin-left: 10px;
   height: 56px;
-  /* width: 366.75px; */
-  padding: 8px;
+  padding: 0;
 }
 
 .netflix_section_1_get_started_email_input {
   height: 56px;
-  width: 366.75px;
-  /* padding: 8px; */
-  border: transparent !important;
-  backdrop-filter: blur(2px);
+  width: 366px;
+  background: rgba(22, 22, 22, 0.85); /* slightly darker for uniformity */
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.7);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
 }
 
 .email-input {
   background-color: transparent;
-  border: transparent;
   height: 100%;
-  width: 366.75px;
+  width: 100%;
+  caret-color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  border: none;
+  outline: none;
+  padding: 0;
+  color: white;
 }
 
-input::placeholder {
-  font-size: 15px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
+.email-input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "NetflixCustomLight", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .netflix_section_1_get_started_button {
@@ -288,13 +309,12 @@ input::placeholder {
 
 .number {
   font-size: 100px;
-  color: rgb(0, 0, 0);
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
   font-weight: 700;
+  color: black;
+  -webkit-text-stroke: 0.5px white;
   cursor: pointer;
   text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
   font-family: "NetflixCustomBold", sans-serif;
-  font-size: 100px;
   position: relative;
   left: -20px;
   top: -125px;
@@ -302,7 +322,7 @@ input::placeholder {
 }
 
 .netflix_section_3 {
-  height: 1400px;
+  height: 1760px;
   background-color: black;
 }
 
@@ -319,21 +339,21 @@ input::placeholder {
   display: grid;
   height: 320px;
   width: 90vw;
-  grid-template-columns: repeat(4, clamp(180px, 29.5vw, 295px));
+  grid-template-columns: repeat(4, 20vw);
   grid-template-rows: 280px;
   gap: 16px;
   justify-content: center;
   box-sizing: border-box;
   margin: 0 auto;
   margin-top: 20px;
-  margin-left: 105px;
+  margin-right: 10px;
 }
 
 .box {
   background: linear-gradient(149deg, #192247 0%, #210e17 99.08%);
   display: flex;
   border-radius: 16px;
-  width: clamp(180px, 29.5vw, 295px);
+  width: 20vw;
   height: 280px;
   flex-direction: column;
 }
@@ -381,12 +401,6 @@ input::placeholder {
   margin-bottom: 10px;
 }
 
-.faq {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 8px;
-}
 .faq_text {
   font-family: "NetflixCustomMedium", sans-serif;
   font-size: 1.5rem;
@@ -396,6 +410,14 @@ input::placeholder {
   height: 70px;
   align-items: center;
   justify-content: center;
+}
+
+.faq {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  height: 600px;
 }
 
 .question {
@@ -415,12 +437,154 @@ input::placeholder {
   font-family: "NetflixCustomLight", sans-serif;
   color: rgb(255, 255, 255);
   -webkit-text-stroke: 0.1px;
-  transition: background-color 1s ease-in-out;
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.68, 0.06);
+  user-select: none;
   /* transition-duration: 250ms;
   transition-property: background-color, margin-bottom, border-radius;
   transition-timing-function: cubic-bezier(0.4, 0, 0.68, 0.06); */
 }
 
-.question:hover{
-  filter: brightness(1.4); 
+.question:hover {
+  filter: brightness(1.4);
+}
+
+.end_text {
+  color: rgb(255, 255, 255);
+  font-family: "NetflixCustomLight", sans-serif;
+  height: 50px;
+  width: 40vw;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.email_and_getstarted_button {
+  height: 56px;
+  width: 90vw;
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: 185px;
+}
+
+.email {
+  background-color: transparent;
+  height: 100%;
+  width: 45%;
+  color: white;
+  background: rgba(22, 22, 22, 0.85);
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.7);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  /* justify-content: space-between; */
+  padding: 0 12px;
+  /* margin-left: 390px; */
+}
+
+.email-input {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  caret-color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+}
+
+.email-input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "NetflixCustomLight", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.get_started_button_container {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.get_started_button {
+  color: white;
+  height: 100%;
+  background-color: rgb(229, 9, 20);
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 213.25px;
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: space-around;
+}
+
+.end_container {
+  padding-left: 155px;
+  padding-right: 155px;
+  height: 390px;
+  margin-top: 70px;
+}
+
+.questions_and_calls {
+  display: flex;
+  gap: 5px;
+  height: 50px;
+}
+
+.text_decor {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: unset;
+  font-size: 14px !important;
+  font-weight: 400;
+  font-family: "NetflixCustomLight", sans-serif;
+}
+
+.underline_texts_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 295px);
+  grid-template-rows: repeat(4, 21px);
+  /* gap: 2px; */
+  row-gap: 10px;
+  margin-top: 16px;
+  height: 175px;
+  cursor: pointer;
+}
+
+.underline_texts_grid > div {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ques {
+  font-size: 16px !important;
+}
+
+.statement_and_link {
+  display: flex;
+  gap: 3px;
+}
+
+.statement_and_link > div {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "NetflixCustomLight", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+
+.link {
+  text-decoration: underline;
+  color: rgb(0, 0, 255) !important;
+  cursor: pointer;
 }
